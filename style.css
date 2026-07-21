@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: 'Share Tech Mono', 'Courier New', monospace;
-  background: #0a0a0a;
+  background: #000000;
   color: #00ff41;
   line-height: 1.6;
   min-height: 100vh;
@@ -41,14 +41,14 @@ a {
   width: 100vw;
   height: 100vh;
   z-index: 0;
-  opacity: 0.2;
+  opacity: 0.15;
   pointer-events: none;
 }
 
 /* ===== VARIÁVEIS ===== */
 :root {
-  --bg: #0a0a0a;
-  --card: rgba(0, 0, 0, 0.75);
+  --bg: #000000;
+  --card: rgba(0, 0, 0, 0.85);
   --text-primary: #00ff41;
   --text-secondary: #88ff88;
   --accent: #00ff41;
@@ -66,7 +66,7 @@ a {
 
 /* ===== ADMIN BAR ===== */
 .admin-bar {
-  background: #111;
+  background: #0a0a0a;
   border-bottom: 1px solid var(--border);
   padding: 0.4rem 0;
   font-size: 0.8rem;
@@ -106,7 +106,7 @@ a {
 
 /* ===== HEADER ===== */
 .site-header {
-  background: rgba(10, 10, 10, 0.85);
+  background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--border);
   padding: 0.75rem 0;
@@ -122,9 +122,9 @@ a {
 }
 
 .logo {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   color: #00ff41;
   text-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
 }
@@ -180,7 +180,7 @@ a {
 
 .btn-nav:hover {
   background: #00ff41;
-  color: #0a0a0a !important;
+  color: #000000 !important;
   box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);
 }
 
@@ -262,7 +262,7 @@ a {
 
 .btn-primary:hover {
   background: #00ff41;
-  color: #0a0a0a;
+  color: #000000;
   box-shadow: 0 0 40px rgba(0, 255, 65, 0.15);
   transform: translateY(-2px);
 }
@@ -329,6 +329,72 @@ a {
   border-radius: 8px;
   width: 100%;
   height: auto;
+}
+
+/* ===== WHATSAPP ===== */
+.canal-card {
+  background: var(--card);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.canal-perfil {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.canal-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #25d366;
+  box-shadow: 0 0 30px rgba(37, 211, 102, 0.15);
+  object-fit: cover;
+}
+
+.canal-info {
+  flex: 1;
+}
+
+.canal-info h3 {
+  color: #00ff41;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.canal-desc {
+  color: #88ff88;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background: #25d366;
+  border: 2px solid #25d366;
+  color: #000000 !important;
+  padding: 0.9rem 2.4rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-family: 'Share Tech Mono', monospace;
+  text-shadow: none;
+}
+
+.btn-whatsapp:hover {
+  background: transparent;
+  color: #25d366 !important;
+  box-shadow: 0 0 40px rgba(37, 211, 102, 0.2);
+  transform: translateY(-2px);
 }
 
 /* ===== JOGOS ===== */
@@ -400,13 +466,13 @@ a {
 
 .game-card .btn-download:hover {
   background: #00ff41;
-  color: #0a0a0a;
+  color: #000000;
   box-shadow: 0 0 30px rgba(0, 255, 65, 0.15);
 }
 
 /* ===== FOOTER ===== */
 .site-footer {
-  background: rgba(10, 10, 10, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   border-top: 1px solid var(--border);
   padding: 2rem 0;
   text-align: center;
@@ -428,7 +494,7 @@ a {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   border: 1px solid var(--border);
   border-radius: 4px;
   width: 52px;
@@ -456,7 +522,7 @@ a {
     display: none;
     flex-direction: column;
     gap: 1rem;
-    background: #111;
+    background: #0a0a0a;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: var(--shadow);
@@ -503,6 +569,16 @@ a {
     margin-right: 0;
     width: 100%;
     text-align: center;
+  }
+
+  .canal-perfil {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .canal-avatar {
+    width: 100px;
+    height: 100px;
   }
 }
 
