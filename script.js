@@ -1,6 +1,4 @@
-// ============================================================
-// 1. MATRIX RAIN (Efeito hacker no fundo)
-// ============================================================
+// ===== MATRIX =====
 const canvas = document.getElementById('matrix-canvas');
 const ctx = canvas.getContext('2d');
 
@@ -34,7 +32,7 @@ function drawMatrix() {
     const y = drops[i] * fontSize;
     
     ctx.shadowColor = '#00ff41';
-    ctx.shadowBlur = 6;
+    ctx.shadowBlur = 8;
     ctx.fillText(text, x, y);
     ctx.shadowBlur = 0;
     
@@ -47,9 +45,7 @@ function drawMatrix() {
 
 setInterval(drawMatrix, 40);
 
-// ============================================================
-// 2. DADOS DOS JOGOS
-// ============================================================
+// ===== JOGOS =====
 const jogos = [
   {
     id: 1,
@@ -71,9 +67,6 @@ const jogos = [
   }
 ];
 
-// ============================================================
-// 3. RENDERIZAR JOGOS
-// ============================================================
 const grid = document.getElementById('games-grid');
 const count = document.getElementById('games-count');
 
@@ -91,9 +84,7 @@ if (grid) {
   }
 }
 
-// ============================================================
-// 4. TEXTO DINÂMICO
-// ============================================================
+// ===== TEXTOS =====
 const aboutText = document.getElementById('about-text');
 if (aboutText) {
   aboutText.textContent = 'Somos a 666 xk — uma comunidade de gamers que busca trazer os melhores jogos exclusivos, com foco em experiência e diversão sem complicação.';
@@ -104,9 +95,7 @@ if (servicesText) {
   servicesText.textContent = 'Oferecemos downloads diretos, curadoria de jogos indie, suporte rápido e uma comunidade ativa para trocar experiências.';
 }
 
-// ============================================================
-// 5. MENU MOBILE
-// ============================================================
+// ===== MENU MOBILE =====
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -116,9 +105,7 @@ if (navToggle && navLinks) {
   });
 }
 
-// ============================================================
-// 6. MÚSICA
-// ============================================================
+// ===== MÚSICA =====
 const musicToggle = document.getElementById('music-toggle');
 let musicaAtiva = false;
 
@@ -129,9 +116,7 @@ if (musicToggle) {
   });
 }
 
-// ============================================================
-// 7. ADMIN LOGOUT
-// ============================================================
+// ===== LOGOUT =====
 const logoutBtn = document.querySelector('.admin-logout');
 if (logoutBtn) {
   logoutBtn.addEventListener('click', (e) => {
@@ -142,4 +127,4 @@ if (logoutBtn) {
   });
 }
 
-console.log('🔥 666 xk carregado com estilo HACKER!');
+console.log('🔥 666 xk carregado!');
