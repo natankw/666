@@ -1,97 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Unholy Games — Jogos exclusivos para você</title>
-<meta name="description" content="Catálogo de jogos exclusivos com download direto e link único por título." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unholy Games — Jogos exclusivos</title>
+  <meta name="description" content="Catálogo de jogos exclusivos com download direto." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="admin-bar">
-  <div class="container">
-    <a href="admin.html">Painel</a>
-    <a href="#" class="admin-logout">Sair</a>
-  </div>
-</div>
-
-<header class="site-header">
-  <div class="container">
-    <a class="logo" href="index.html">Unholy <span class="dot">Games</span></a>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#jogos">Jogos</a></li>
-        <li><a href="admin.html">Login</a></li>
-      </ul>
-    </nav>
-    <button class="nav-toggle" aria-label="Abrir menu">☰</button>
-  </div>
-</header>
-
-<section class="hero">
-  <canvas id="matrix-canvas"></canvas>
-  <div class="container">
-    <p class="hero-eyebrow">catálogo ativo</p>
-    <h1>Jogos exclusivos<br>para você</h1>
-    <p>Uma seleção enxuta de jogos, cada um com sua própria página e link de download direto — sem enrolação, sem espera.</p>
-    <a href="#jogos" class="btn btn-primary">Ver Jogos</a>
-  </div>
-</section>
-
-<section class="section" id="sobre">
-  <div class="container">
-    <p class="section-tag">// sobre</p>
-    <h2 class="section-title">Quem somos</h2>
-    <div class="about-grid">
-      <div>
-        <p class="prose" id="about-text"></p>
-      </div>
-      <div class="media">
-        <img id="about-image" alt="Imagem sobre a Unholy Games" style="display:none;">
-      </div>
+  <!-- BARRA ADMIN (visível só pra vc) -->
+  <div class="admin-bar">
+    <div class="container">
+      <a href="admin.html">🔐 Painel</a>
+      <a href="#" class="admin-logout">Sair</a>
     </div>
   </div>
-</section>
 
-<section class="section" id="servicos">
-  <div class="container">
-    <p class="section-tag">// serviços</p>
-    <h2 class="section-title">O que oferecemos</h2>
-    <div class="services-grid">
-      <div class="media">
-        <img id="services-image" alt="Imagem dos serviços" style="display:none;">
-      </div>
-      <div>
-        <p class="prose" id="services-text"></p>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Unholy <span class="dot">Games</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#jogos">Jogos</a></li>
+          <li><a href="admin.html" class="btn-nav">Entrar</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <canvas id="matrix-canvas"></canvas>
+    <div class="container hero-content">
+      <span class="badge">🎮 Catálogo Ativo</span>
+      <h1 class="hero-title">Jogos exclusivos<br>para sua jornada</h1>
+      <p class="hero-sub">Uma seleção enxuta de jogos, cada um com sua própria página e link de download direto — sem enrolação, sem espera.</p>
+      <a href="#jogos" class="btn btn-primary">Explorar Jogos ↓</a>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <span class="section-tag">// sobre</span>
+      <h2 class="section-title">Quem somos</h2>
+      <div class="about-grid">
+        <div>
+          <p class="prose" id="about-text"></p>
+        </div>
+        <div class="media">
+          <img id="about-image" alt="Sobre a Unholy" style="display:none;">
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="jogos" style="border-bottom:none;">
-  <div class="container">
-    <p class="section-tag">// catálogo</p>
-    <div class="games-toolbar">
-      <h2 class="section-title" style="margin-bottom:0;">Jogos disponíveis</h2>
-      <span class="games-count" id="games-count"></span>
+  <!-- SERVIÇOS -->
+  <section class="section" id="servicos">
+    <div class="container">
+      <span class="section-tag">// serviços</span>
+      <h2 class="section-title">O que oferecemos</h2>
+      <div class="services-grid">
+        <div class="media">
+          <img id="services-image" alt="Nossos serviços" style="display:none;">
+        </div>
+        <div>
+          <p class="prose" id="services-text"></p>
+        </div>
+      </div>
     </div>
-    <div class="games-grid" id="games-grid"></div>
-  </div>
-</section>
+  </section>
 
-<footer class="site-footer">
-  <div class="container">© 2026 Unholy Games. Feito com ❤️ para gamers</div>
-</footer>
+  <!-- JOGOS -->
+  <section class="section" id="jogos">
+    <div class="container">
+      <span class="section-tag">// catálogo</span>
+      <div class="games-toolbar">
+        <h2 class="section-title" style="margin-bottom:0;">Jogos disponíveis</h2>
+        <span class="games-count" id="games-count"></span>
+      </div>
+      <div class="games-grid" id="games-grid"></div>
+    </div>
+  </section>
 
-<button class="music-toggle" id="music-toggle" aria-label="Ativar ou desativar música">🔇</button>
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 </p>
+    </div>
+  </footer>
 
-<script src="script.js"></script>
+  <!-- BOTÃO MÚSICA -->
+  <button class="music-toggle" id="music-toggle" aria-label="Ativar ou desativar música">🔇</button>
+
+  <script src="script.js"></script>
 </body>
-        </html>
-
+</html>
