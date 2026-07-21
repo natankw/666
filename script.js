@@ -33,7 +33,6 @@ function drawMatrix() {
     const x = i * fontSize;
     const y = drops[i] * fontSize;
     
-    // Brilho nos caracteres
     ctx.shadowColor = '#00ff41';
     ctx.shadowBlur = 6;
     ctx.fillText(text, x, y);
@@ -49,7 +48,7 @@ function drawMatrix() {
 setInterval(drawMatrix, 40);
 
 // ============================================================
-// 2. DADOS DOS JOGOS (seus jogos aqui)
+// 2. DADOS DOS JOGOS
 // ============================================================
 const jogos = [
   {
@@ -93,11 +92,11 @@ if (grid) {
 }
 
 // ============================================================
-// 4. TEXTO DINÂMICO (Sobre e Serviços - se tiver os IDs)
+// 4. TEXTO DINÂMICO
 // ============================================================
 const aboutText = document.getElementById('about-text');
 if (aboutText) {
-  aboutText.textContent = 'Somos uma comunidade de gamers que busca trazer os melhores jogos exclusivos, com foco em experiência e diversão sem complicação.';
+  aboutText.textContent = 'Somos a 666 xk — uma comunidade de gamers que busca trazer os melhores jogos exclusivos, com foco em experiência e diversão sem complicação.';
 }
 
 const servicesText = document.getElementById('services-text');
@@ -118,7 +117,7 @@ if (navToggle && navLinks) {
 }
 
 // ============================================================
-// 6. MÚSICA (toggle)
+// 6. MÚSICA
 // ============================================================
 const musicToggle = document.getElementById('music-toggle');
 let musicaAtiva = false;
@@ -131,7 +130,7 @@ if (musicToggle) {
 }
 
 // ============================================================
-// 7. ADMIN LOGOUT (simples)
+// 7. ADMIN LOGOUT
 // ============================================================
 const logoutBtn = document.querySelector('.admin-logout');
 if (logoutBtn) {
@@ -143,4 +142,4 @@ if (logoutBtn) {
   });
 }
 
-console.log('🔥 Unholy Games carregado com estilo HACKER!');
+console.log('🔥 666 xk carregado com estilo HACKER!');
