@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unholy Games — Jogos exclusivos</title>
+  <title>Unholy Games — Sistema Hacker</title>
   <meta name="description" content="Catálogo de jogos exclusivos com download direto." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- BARRA ADMIN (visível só pra vc) -->
+  <!-- CANVAS DA MATRIX (FUNDO) -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- BARRA ADMIN -->
   <div class="admin-bar">
     <div class="container">
+      <span class="admin-user">👾 root@unholy</span>
       <a href="admin.html">🔐 Painel</a>
       <a href="#" class="admin-logout">Sair</a>
     </div>
@@ -29,7 +33,7 @@
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#jogos">Jogos</a></li>
-          <li><a href="admin.html" class="btn-nav">Entrar</a></li>
+          <li><a href="admin.html" class="btn-nav">⏎ Login</a></li>
         </ul>
       </nav>
       <button class="nav-toggle" aria-label="Abrir menu">☰</button>
@@ -38,12 +42,11 @@
 
   <!-- HERO -->
   <section class="hero">
-    <canvas id="matrix-canvas"></canvas>
     <div class="container hero-content">
-      <span class="badge">🎮 Catálogo Ativo</span>
+      <span class="badge">▶ CATÁLOGO ATIVO</span>
       <h1 class="hero-title">Jogos exclusivos<br>para sua jornada</h1>
-      <p class="hero-sub">Uma seleção enxuta de jogos, cada um com sua própria página e link de download direto — sem enrolação, sem espera.</p>
-      <a href="#jogos" class="btn btn-primary">Explorar Jogos ↓</a>
+      <p class="hero-sub">Seleção enxuta de jogos com download direto — sem enrolação, sem espera.</p>
+      <a href="#jogos" class="btn btn-primary">$ Explorar Jogos ↓</a>
     </div>
   </section>
 
@@ -94,7 +97,7 @@
   <!-- RODAPÉ -->
   <footer class="site-footer">
     <div class="container">
-      <p>© 2026 </p>
+      <p>© 2026 Unholy Games — <span class="blink">_</span></p>
     </div>
   </footer>
 
