@@ -3,110 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>666 xk</title>
+  <title>666 xk — Catálogo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- MATRIX -->
-  <canvas id="matrix-canvas"></canvas>
+  <div class="bg-glow"></div>
 
-  <!-- ADMIN -->
-  <div class="admin-bar">
-    <div class="container">
-      <span class="admin-user">👾 root@666</span>
-      <a href="admin.html">🔐 Painel</a>
-      <a href="#" class="admin-logout">Sair</a>
-    </div>
-  </div>
+  <main class="page">
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container">
-      <a class="logo" href="index.html">666 <span class="dot">xk</span></a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#jogos">Jogos</a></li>
-          <li><a href="#whatsapp">Canal</a></li>
-          <li><a href="admin.html" class="btn-nav">⏎ Login</a></li>
-        </ul>
-      </nav>
-      <button class="nav-toggle">☰</button>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-content">
-      <span class="badge">▶ CATÁLOGO ATIVO</span>
-      <h1 class="hero-title">Jogos exclusivos<br>para sua jornada</h1>
-      <p class="hero-sub">Seleção enxuta de jogos com download direto — sem enrolação, sem espera.</p>
-      <a href="#jogos" class="btn btn-primary">$ Explorar Jogos ↓</a>
-    </div>
-  </section>
-
-  <!-- SOBRE -->
-  <section class="section" id="sobre">
-    <div class="container">
-      <span class="section-tag">// sobre</span>
-      <h2 class="section-title">Quem somos</h2>
-      <p class="prose" id="about-text"></p>
-    </div>
-  </section>
-
-  <!-- SERVIÇOS -->
-  <section class="section" id="servicos">
-    <div class="container">
-      <span class="section-tag">// serviços</span>
-      <h2 class="section-title">O que oferecemos</h2>
-      <p class="prose" id="services-text"></p>
-    </div>
-  </section>
-
-  <!-- CANAL WHATSAPP -->
-  <section class="section" id="whatsapp">
-    <div class="container">
-      <span class="section-tag">// canal</span>
-      <h2 class="section-title">Canal WhatsApp</h2>
-      <div class="canal-card">
-        <div class="canal-perfil">
-          <div class="canal-avatar">📱</div>
-          <div class="canal-info">
-            <h3>@666 xk</h3>
-            <p class="canal-desc">Siga nosso canal no WhatsApp para ficar por dentro de todos os jogos, novidades e promoções exclusivas!</p>
-            <a href="https://whatsapp.com/channel/0029Vb8XsOg7dmeZYaHEhg3p" target="_blank" class="btn btn-whatsapp">📲 Seguir Canal</a>
-          </div>
-        </div>
+    <!-- CANAL -->
+    <section class="channel">
+      <div class="avatar">
+        <span>666<br>xk</span>
       </div>
-    </div>
-  </section>
 
-  <!-- JOGOS -->
-  <section class="section" id="jogos">
-    <div class="container">
-      <span class="section-tag">// catálogo</span>
-      <div class="games-toolbar">
-        <h2 class="section-title" style="margin-bottom:0;">Jogos disponíveis</h2>
-        <span class="games-count" id="games-count"></span>
+      <h1 class="channel-title">
+        <span class="hash">#</span><span class="num">666</span><span class="xk">xk</span>
+      </h1>
+
+      <p class="channel-desc">Canal oficial de downloads da Ordem. Jogos, novidades e muito mais.</p>
+
+      <div class="channel-meta">
+        <span class="dot"></span>
+        <span>Canal &middot; Downloads da Ordem</span>
       </div>
+
+      <div class="channel-actions">
+        <span class="pill" id="games-count-pill">🎮 <span id="games-count">0</span> jogos</span>
+        <a href="https://whatsapp.com/channel/0029Vb8XsOg7dmeZYaHEhg3p" target="_blank" class="btn-entrar">💬 Entrar</a>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- CATALOGO -->
+    <section class="catalogo">
+      <h2 class="catalogo-title"><span class="scroll">📜</span> Catálogo</h2>
+
+      <input type="text" id="search-input" class="search-input" placeholder="Buscar jogo...">
+
+      <div class="select-wrap">
+        <select id="category-select" class="category-select">
+          <option value="todas">Todas</option>
+        </select>
+        <span class="select-arrow">⌄</span>
+      </div>
+
       <div class="games-grid" id="games-grid"></div>
-    </div>
-  </section>
+      <p class="empty-msg" id="empty-msg" style="display:none;">Nenhum jogo encontrado.</p>
+    </section>
 
-  <!-- RODAPÉ -->
-  <footer class="site-footer">
-    <div class="container">
+    <footer class="site-footer">
       <p>© 2026 666 xk — <span class="blink">_</span></p>
-    </div>
-  </footer>
+    </footer>
+  </main>
 
-  <!-- MÚSICA -->
-  <button class="music-toggle" id="music-toggle">🔇</button>
+  <!-- PLAYER -->
+  <div class="audio-bar">
+    <button class="audio-btn" id="play-btn" aria-label="Tocar música">▶</button>
+    <button class="audio-btn" id="mute-btn" aria-label="Mudo">🔊</button>
+    <input type="range" id="volume-slider" class="volume-slider" min="0" max="100" value="0">
+    <span class="audio-state" id="audio-state">OFF</span>
+  </div>
 
   <script src="script.js"></script>
 </body>
