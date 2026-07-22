@@ -3,14 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Painel Admin — Unholy Games</title>
+<title>Painel Admin — 666 xk</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="bg-glow"></div>
 
 <!-- ============ LOGIN ============ -->
 <div class="login-wrap" id="login-wrap">
@@ -22,90 +24,44 @@
         <label for="login-password">Senha</label>
         <input type="password" id="login-password" autocomplete="current-password" required />
       </div>
-      <button type="submit" class="btn btn-dark btn-block">Entrar</button>
+      <button type="submit" class="btn-entrar btn-block">Entrar</button>
       <p class="error-msg" id="login-error"></p>
     </form>
-    <p style="margin-top:24px;"><a href="index.html" style="font-size:13px;color:var(--gray);">← Voltar para o site</a></p>
+    <p class="back-link-wrap"><a href="index.html" class="back-link">← Voltar para o site</a></p>
   </div>
 </div>
 
 <!-- ============ ADMIN SHELL ============ -->
 <div class="admin-shell" id="admin-shell" style="display:none;">
   <header class="admin-header">
-    <div class="container">
-      <a class="logo" href="index.html">Unholy <span class="dot">Games</span></a>
-      <button class="btn btn-outline btn-sm" id="logout-btn" style="border-color:#fff;color:#fff;">Sair</button>
+    <div class="admin-header-inner">
+      <a class="admin-logo" href="index.html">666 <span class="xk">xk</span></a>
+      <button class="btn-outline-sm" id="logout-btn">Sair</button>
     </div>
   </header>
 
   <div class="admin-layout">
     <nav class="admin-nav">
-      <button class="active" data-panel="panel-texts">✏️ Editar Textos</button>
-      <button data-panel="panel-images">🖼️ Gerenciar Imagens</button>
-      <button data-panel="panel-add-game">🎮 Adicionar Jogo</button>
+      <button class="active" data-panel="panel-add-game">🎮 Adicionar Jogo</button>
       <button data-panel="panel-games">📋 Lista de Jogos</button>
       <button data-panel="panel-backup">💾 Backup</button>
+      <button data-panel="panel-password">🔑 Senha</button>
     </nav>
 
     <main class="admin-main">
 
-      <!-- TEXTS -->
-      <section class="panel active" id="panel-texts">
-        <h2>Editar Textos</h2>
-        <p class="desc">Atualize o conteúdo das seções Sobre e Serviços exibidas na página inicial.</p>
-        <form id="text-form" class="card">
-          <div class="field">
-            <label for="about-input">Texto — Sobre</label>
-            <textarea id="about-input"></textarea>
-          </div>
-          <div class="field">
-            <label for="services-input">Texto — Serviços</label>
-            <textarea id="services-input"></textarea>
-          </div>
-          <button type="submit" class="btn btn-dark">Salvar textos</button>
-        </form>
-      </section>
-
-      <!-- IMAGES -->
-      <section class="panel" id="panel-images">
-        <h2>Gerenciar Imagens</h2>
-        <p class="desc">Adicione imagens por URL ou upload e escolha quais aparecem em cada seção.</p>
-
-        <div class="card">
-          <div class="field">
-            <label>Adicionar por URL</label>
-            <form id="gallery-url-form" class="file-row">
-              <input type="url" id="gallery-url-input" placeholder="https://exemplo.com/imagem.jpg" style="flex:1;min-width:220px;" required />
-              <button type="submit" class="btn btn-dark btn-sm">Adicionar</button>
-            </form>
-          </div>
-          <div class="field">
-            <label for="gallery-file-input">Adicionar por upload de arquivo</label>
-            <input type="file" id="gallery-file-input" accept="image/*" multiple />
-          </div>
-          <div id="gallery-grid" class="gallery-grid"></div>
-        </div>
-
-        <div class="card">
-          <div class="field">
-            <label for="about-image-select">Imagem da seção Sobre</label>
-            <select id="about-image-select"></select>
-          </div>
-          <div class="field">
-            <label for="services-image-select">Imagem da seção Serviços</label>
-            <select id="services-image-select"></select>
-          </div>
-        </div>
-      </section>
-
       <!-- ADD GAME -->
-      <section class="panel" id="panel-add-game">
+      <section class="panel active" id="panel-add-game">
         <h2>Adicionar Jogo</h2>
-        <p class="desc">Ao publicar, um link único é gerado automaticamente para este jogo.</p>
+        <p class="desc">Publique um jogo novo — ele aparece direto no catálogo do site (neste navegador).</p>
         <form id="game-form" class="card">
           <div class="field">
             <label for="game-title">Título do jogo *</label>
             <input type="text" id="game-title" required />
+          </div>
+          <div class="field">
+            <label for="game-category">Categoria</label>
+            <input type="text" id="game-category" placeholder="Ex: Ação, RPG, Corrida" />
           </div>
           <div class="field">
             <label for="game-download-url">Link de download (URL do arquivo) *</label>
@@ -116,38 +72,57 @@
             <textarea id="game-description"></textarea>
           </div>
           <div class="field">
-            <label for="game-cover-url">URL da capa</label>
+            <label for="game-cover-url">URL da capa (opcional)</label>
             <input type="url" id="game-cover-url" placeholder="https://exemplo.com/capa.jpg" />
           </div>
           <div class="field">
             <label for="game-size">Tamanho do arquivo (opcional)</label>
             <input type="text" id="game-size" placeholder="Ex: 2.4 GB" />
           </div>
-          <button type="submit" class="btn btn-dark">Publicar jogo</button>
+          <button type="submit" class="btn-entrar">Publicar jogo</button>
         </form>
       </section>
 
       <!-- GAMES LIST -->
       <section class="panel" id="panel-games">
-        <h2>Lista de Jogos <span style="color:var(--gray);font-weight:600;font-size:16px;">(<span id="games-total">0</span>)</span></h2>
-        <p class="desc">Copie o link único de cada jogo para compartilhar, ou exclua um título do catálogo.</p>
+        <h2>Lista de Jogos <span class="count-tag">(<span id="games-total">0</span>)</span></h2>
+        <p class="desc">Copie o link único de cada jogo pra compartilhar, ou exclua um título do catálogo.</p>
         <div class="card" id="games-list"></div>
       </section>
 
       <!-- BACKUP -->
       <section class="panel" id="panel-backup">
         <h2>Backup</h2>
-        <p class="desc">Exporte todos os dados (textos, imagens e jogos) em um arquivo JSON, ou importe um backup existente.</p>
+        <p class="desc">Exporte todos os jogos num arquivo JSON, ou importe um backup existente (útil pra levar o catálogo pra outro navegador/aparelho).</p>
         <div class="card">
           <div class="field">
             <label>Exportar dados</label>
-            <button type="button" class="btn btn-dark" id="export-btn">⬇️ Exportar backup (.json)</button>
+            <button type="button" class="btn-entrar" id="export-btn">⬇ Exportar backup (.json)</button>
           </div>
           <div class="field">
             <label for="import-input">Importar dados</label>
             <input type="file" id="import-input" accept="application/json" />
           </div>
         </div>
+      </section>
+
+      <!-- PASSWORD -->
+      <section class="panel" id="panel-password">
+        <h2>Alterar Senha</h2>
+        <p class="desc">Troque a senha de acesso ao painel.</p>
+        <form id="password-form" class="card">
+          <div class="field">
+            <label for="current-password">Senha atual</label>
+            <input type="password" id="current-password" required />
+          </div>
+          <div class="field">
+            <label for="new-password">Nova senha</label>
+            <input type="password" id="new-password" required />
+          </div>
+          <button type="submit" class="btn-entrar">Salvar nova senha</button>
+          <p class="error-msg" id="password-error"></p>
+          <p class="success-msg" id="password-success"></p>
+        </form>
       </section>
 
     </main>
@@ -157,4 +132,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
