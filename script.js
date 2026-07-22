@@ -7,7 +7,7 @@
    ========================================================= */
 
 const STORAGE_KEY = '666xk_data_v1';
-const DEFAULT_PASSWORD = '666xk';
+const DEFAULT_PASSWORD = '66610092009';
 
 function seedData() {
   const seed = {
