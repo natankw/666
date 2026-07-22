@@ -320,3 +320,326 @@ a { text-decoration: none; color: inherit; }
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
   }
+
+/* ===== AUDIO BAR ===== */
+.audio-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  max-width: 420px;
+  margin: 0 auto 1.4rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  backdrop-filter: blur(8px);
+}
+
+.audio-btn {
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-size: 0.95rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.volume-slider {
+  flex: 1;
+  accent-color: var(--gold);
+  height: 3px;
+}
+
+.audio-state {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  flex-shrink: 0;
+  width: 32px;
+  text-align: right;
+}
+
+/* ===== DOWNLOAD PAGE ===== */
+.download-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 2rem 1.6rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.download-cover {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+}
+
+.download-card h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 2.1rem;
+  color: var(--text);
+  margin: 0.5rem 0 0.8rem;
+}
+
+.download-desc {
+  color: var(--text-dim);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+
+.download-size {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin-bottom: 1.4rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1.4rem;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--text);
+  border-color: var(--text-dim);
+}
+
+/* ===== ADMIN — LOGIN ===== */
+.login-wrap {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 360px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 2.2rem 1.8rem;
+  text-align: center;
+}
+
+.login-card h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.hint {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin-bottom: 1.6rem;
+}
+
+.field {
+  text-align: left;
+  margin-bottom: 1.1rem;
+}
+
+.field label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.3px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+}
+
+.field textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.btn-block { width: 100%; text-align: center; justify-content: center; }
+
+.error-msg {
+  color: #e0685f;
+  font-size: 0.85rem;
+  margin-top: 0.8rem;
+  min-height: 1.1em;
+}
+
+.success-msg {
+  color: #7fbf8f;
+  font-size: 0.85rem;
+  margin-top: 0.8rem;
+  min-height: 1.1em;
+}
+
+.back-link-wrap { margin-top: 1.5rem; }
+
+/* ===== ADMIN — SHELL ===== */
+.admin-shell { position: relative; z-index: 1; min-height: 100vh; }
+
+.admin-header {
+  border-bottom: 1px solid var(--border);
+  background: rgba(10, 10, 11, 0.85);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.admin-header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  color: var(--text);
+}
+
+.admin-logo .xk { color: var(--gold); }
+
+.btn-outline-sm {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.btn-outline-sm:hover { border-color: var(--gold); }
+.btn-outline-sm.danger { color: #e0685f; border-color: rgba(224, 104, 95, 0.4); }
+.btn-outline-sm.danger:hover { border-color: #e0685f; }
+
+.admin-layout {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 5rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+}
+
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-nav button {
+  text-align: left;
+  background: none;
+  border: 1px solid transparent;
+  color: var(--text-dim);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-nav button:hover { color: var(--text); }
+
+.admin-nav button.active {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--gold);
+}
+
+.panel { display: none; }
+.panel.active { display: block; }
+
+.panel h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.count-tag { color: var(--text-dim); font-size: 1rem; font-family: 'Inter', sans-serif; }
+
+.desc { color: var(--text-dim); font-size: 0.92rem; margin-bottom: 1.3rem; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.6rem;
+}
+
+.admin-game-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.admin-game-row:last-child { border-bottom: none; }
+
+.admin-game-row strong {
+  color: var(--text);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  margin-right: 0.6rem;
+}
+
+.admin-game-actions { display: flex; gap: 0.6rem; flex-shrink: 0; }
+
+@media (max-width: 720px) {
+  .admin-layout { grid-template-columns: 1fr; }
+  .admin-nav { flex-direction: row; flex-wrap: wrap; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 420px) {
+  .channel-title { font-size: 2.4rem; letter-spacing: 3px; }
+  .avatar { width: 108px; height: 108px; }
+  .btn-entrar { padding: 0.8rem 2.2rem; }
+}
